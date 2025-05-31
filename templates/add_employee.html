@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .form-box {
+            background-color: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #bbb;
+        }
+        .form-box h2 {
+            text-align: center;
+            color: #004080;
+            margin-bottom: 25px;
+        }
+        .form-box form input,
+        .form-box form select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-box form input[type="submit"] {
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .form-box form input[type="submit"]:hover {
+            background-color: #0059b3;
+        }
+    </style>
+
+    <div class="form-box">
+        <h2>Add New Employee</h2>
+        <form method="POST" action="/add-employee">
+            <input type="text" name="name" placeholder="Employee Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <input type="number" name="salary" placeholder="Salary" required>
+            <select name="department" required>
+                <option value="">Select Department</option>
+                <option>HR</option>
+                <option>Finance</option>
+                <option>Development</option>
+                <option>Marketing</option>
+            </select>
+            <input type="submit" value="Add Employee">
+        </form>
+    </div>
+{% endblock %}

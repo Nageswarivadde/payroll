@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .dashboard {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #ccc;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        .dashboard h2 {
+            color: #004080;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background-color: #e6f0ff;
+            flex: 1 1 200px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s ease;
+            box-shadow: 0px 0px 5px #aaa;
+        }
+        .card:hover {
+            background-color: #cce0ff;
+            transform: scale(1.05);
+        }
+        .card h3 {
+            margin: 10px 0;
+            color: #003366;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #004080;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .card a:hover {
+            background-color: #0059b3;
+        }
+    </style>
+
+    <div class="dashboard">
+        <h2>Welcome, {{ user }}</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Add Employee</h3>
+                <a href="/add-employee">Go</a>
+            </div>
+            <div class="card">
+                <h3>Employee List</h3>
+                <a href="/employees">View</a>
+            </div>
+            <div class="card">
+                <h3>Generate Payslip</h3>
+                <a href="/generate-payslip">Generate</a>
+            </div>
+            <div class="card">
+                <h3>View Payslip</h3>
+                <a href="/viewpayslip">View</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
