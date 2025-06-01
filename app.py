@@ -12,7 +12,7 @@ from utils.pdf_generator import generate_payslip_pdf
 from datetime import datetime
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://chintakayalamutyalu:Demudu%4021@cluster0.mban80h.mongodb.net/"
+app.config["MONGO_URI"] = "mongodb+srv://nageswarivadde2:GJCScnaUSnUvXlcy@cluster0.zaxcx89.mongodb.net/"
 mongo = PyMongo(app)
 users = mongo.db.users
 
