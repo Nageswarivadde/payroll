@@ -1,4 +1,4 @@
 import os
 
-MONGO_URI = "mongodb+srv://chintakayalamutyalu:Demudu%4021@cluster0.mban80h.mongodb.net/"
+MONGO_URI = "mongodb+srv://nageswarivadde2:GJCScnaUSnUvXlcy@cluster0.zaxcx89.mongodb.net/"
 DB_NAME = "payrollDB"
