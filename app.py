@@ -12,12 +12,12 @@ from utils.pdf_generator import generate_payslip_pdf
 from datetime import datetime
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://nageswarivadde2:GJCScnaUSnUvXlcy@cluster0.zaxcx89.mongodb.net/payroll_db"
+app.config["MONGO_URI"] = "mongodb+srv://nageswarivadde2:Nageswari%40098@cluster0.zaxcx89.mongodb.net/"
 
 mongo = PyMongo(app)
 users = mongo.db.users
 
-app.secret_key = 'mutyalu1234'
+app.secret_key = 'nageswari1234'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///payroll.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
